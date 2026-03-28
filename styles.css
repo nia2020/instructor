@@ -263,6 +263,10 @@ body {
   text-wrap: balance;
 }
 
+.hero-title-keep {
+  white-space: nowrap;
+}
+
 .hero-title-accent {
   background: linear-gradient(135deg, #ffe8c8 0%, #ffcf8a 35%, #ff9f43 70%, #ffb35c 100%);
   -webkit-background-clip: text;
@@ -1819,13 +1823,6 @@ body {
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-md);
   border: 2px solid transparent;
-}
-
-.stepup-card-featured {
-  background: linear-gradient(var(--color-bg-alt), var(--color-bg-alt)) padding-box,
-              linear-gradient(135deg, var(--color-primary), var(--color-accent)) border-box;
-  border: 2px solid transparent;
-  box-shadow: var(--shadow-lg);
 }
 
 .stepup-badge {
