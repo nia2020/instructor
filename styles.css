@@ -1117,6 +1117,10 @@ body {
   background: var(--color-bg-alt);
 }
 
+.section-achievement .container {
+  max-width: min(100%, 1120px);
+}
+
 .achievement-subtitle {
   text-align: center;
   font-size: 1rem;
@@ -1134,10 +1138,91 @@ body {
   line-height: 1.8;
 }
 
+/* 自治体（上）→ メディア（下）の1列・見出し・ロゴとも中央 */
+.achievement-logo-showcase {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 2.75rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 2.25rem;
+}
+
+.achievement-logo-group {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.achievement-logo-group-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: center;
+  margin: 0 0 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+/* カテゴリごとに1枚の白地でロゴをまとめて表示 */
+.achievement-logo-panel {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.35rem 1.5rem;
+  border: 1px solid rgba(26, 95, 180, 0.08);
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.achievement-logo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1.35rem 1.75rem;
+}
+
+.achievement-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.achievement-logo-item img {
+  max-height: 3.35rem;
+  max-width: min(100%, 22rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: grayscale(0.08);
+  opacity: 0.95;
+  transition: filter var(--transition), opacity var(--transition);
+}
+
+.achievement-logo-item:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* 連携大学：北九州市立大学・中村学園大学のみやや小さく */
+.achievement-logo-item--sm img {
+  max-height: 2.85rem;
+  max-width: min(100%, 19rem);
+}
+
 .achievement-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  margin-bottom: 2.25rem;
 }
 
 .achievement-card {
@@ -1205,7 +1290,7 @@ body {
   text-align: center;
 }
 
-.message-visual img {
+.message-visual > img {
   width: 100%;
   max-width: 240px;
   height: auto;
@@ -1215,6 +1300,23 @@ body {
 }
 
 .message-profile {
+  text-align: center;
+}
+
+.message-profile-figure {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  display: block;
+  margin: 1.1rem auto 0;
+}
+
+.message-ambassador-note {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0.65rem auto 0;
+  max-width: 280px;
   text-align: center;
 }
 
@@ -1250,6 +1352,39 @@ body {
   margin: 0 0 1rem;
 }
 
+.popup-geeks-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.message-popup-geeks-box {
+  margin: 1.25rem 0 0;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border: 1px solid rgba(26, 95, 180, 0.12);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.message-popup-geeks-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 0.65rem;
+  line-height: 1.4;
+}
+
+.message-popup-geeks-desc {
+  font-size: 0.98rem;
+  color: var(--color-text-muted);
+  line-height: 1.85;
+  margin: 0;
+}
+
 .message-notice {
   font-size: 0.9rem;
   font-weight: 600;
@@ -1258,7 +1393,7 @@ body {
   background: linear-gradient(135deg, rgba(255, 159, 67, 0.18) 0%, rgba(26, 95, 180, 0.1) 100%);
   border: 2px solid rgba(255, 159, 67, 0.6);
   border-radius: 12px;
-  margin: 1rem 0 0;
+  margin: 1.25rem 0 0;
   display: inline-block;
   animation: mvv-notice-shake 4s ease-in-out infinite, mvv-notice-pulse 2.5s ease-in-out infinite;
 }
