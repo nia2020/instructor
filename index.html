@@ -30,13 +30,31 @@
   </header>
 
   <main>
-    <!-- ヒーローセクション -->
+    <!-- ヒーローセクション（撮影素材：講師と参加者の様子） -->
     <section class="hero">
-      <div class="hero-inner">
-        <p class="hero-catch">課題解決能力、思考力、分析力で輝く未来を描け！<br>未来はあなたの手の中に！スタートアップシティからの挑戦状！</p>
-        <h1 class="hero-title">謎解きで起業家精神を届ける<br>認定講師になりませんか？</h1>
-        <p class="hero-subtitle">リアル謎解きゲーム「スタートアップシティからの挑戦状」の認定講師を募集しています</p>
-        <a href="#contact" class="hero-cta">お申し込みはこちら</a>
+      <div class="hero-photo-bg">
+        <div class="hero-slides">
+          <img class="hero-slide is-active" src="assets/hero-workshop-kids-collab.png" alt="" width="1024" height="614" decoding="async" fetchpriority="high">
+          <img class="hero-slide" src="assets/hero-workshop-group-fist.png" alt="" width="2000" height="1200" decoding="async" loading="lazy">
+          <img class="hero-slide" src="assets/hero-workshop-wide.png" alt="" width="2000" height="1200" decoding="async" loading="lazy">
+        </div>
+      </div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-carousel-dots" role="group" aria-label="メイン写真の切り替え">
+        <button type="button" class="hero-dot is-active" aria-label="写真1：子どもたちがテーブルで協力して取り組む様子" aria-current="true"></button>
+        <button type="button" class="hero-dot" aria-label="写真2：参加者みんなで盛り上がる様子" aria-current="false"></button>
+        <button type="button" class="hero-dot" aria-label="写真3：ワークショップ会場のにぎわい" aria-current="false"></button>
+      </div>
+      <div class="hero-inner hero-stack">
+        <div class="hero-content">
+          <p class="hero-eyebrow">リアル謎解きゲーム「スタートアップシティからの挑戦状」／認定講師募集</p>
+          <h1 class="hero-title">謎解きで起業家精神を届ける<br><span class="hero-title-accent">認定講師</span>になりませんか？</h1>
+          <p class="hero-lead">課題解決力・思考力・分析力で、子どもたちが輝く未来を描く仲間を歓迎します。あなたの手から、次の世代へ届けませんか。</p>
+          <div class="hero-actions">
+            <a href="#contact" class="hero-cta hero-cta-primary">お申し込みはこちら</a>
+            <a href="#concept" class="hero-cta hero-cta-secondary">制度の詳細を見る</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -449,7 +467,10 @@
       <div class="container">
         <h2 class="section-title">養成講座の内容</h2>
         <div class="content-block">
-          <p class="lead">認定講師養成講座は大きく以下の3つのパートから成り立っています。オンラインで2時間30分で実施いたします。開催日程は随時募集中です。1名様より催行いたします。</p>
+          <p class="lead">認定講師養成講座は大きく以下の3つのパートから成り立っています。オンラインで2時間30分で実施いたします。</p>
+          <div class="content-schedule-callout">
+            <p>開催日程は<strong>随時募集中</strong>です。<strong>1名様より催行</strong>いたします。</p>
+          </div>
           <ol class="content-list">
             <li>
               <strong>教材の特徴および研修会設計上の注意点</strong>
@@ -549,16 +570,8 @@
             <dd>いいえ、起業家精神／起業家的資質・能力を身につけて、今後の社会で活躍できる人材を育むことを目的としています。</dd>
           </dl>
           <dl class="faq-item">
-            <dt>体験会にはどのように参加できますか？</dt>
-            <dd>認定講師が実施する体験会の開催情報をご確認ください。オンライン・対面のいずれも実施しております。</dd>
-          </dl>
-          <dl class="faq-item">
             <dt>養成講座はオンラインで受講できますか？</dt>
             <dd>はい、オンラインで受講可能です。お申し込み受付後、事務局からご連絡させていただきます。</dd>
-          </dl>
-          <dl class="faq-item">
-            <dt>教材の貸し出しはありますか？</dt>
-            <dd>中級認定講師以上の方には教材の無償貸し出しを行っております。送料は認定講師のご負担となります。</dd>
           </dl>
           <dl class="faq-item">
             <dt>受講料の支払い方法は？</dt>
@@ -598,5 +611,6 @@
       <p class="footer-copy">&copy; スタートアップポップコーン株式会社</p>
     </div>
   </footer>
+  <script src="hero-carousel.js" defer></script>
 </body>
 </html>
