@@ -2,7 +2,6 @@
   const toggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('site-nav');
   const backdrop = document.getElementById('nav-backdrop');
-  const closeBtn = document.getElementById('nav-close');
   if (!toggle || !nav || !backdrop) return;
 
   const mq = window.matchMedia('(max-width: 768px)');
@@ -33,11 +32,6 @@
 
   toggle.addEventListener('click', () => {
     setOpen(toggle.getAttribute('aria-expanded') !== 'true');
-  });
-
-  closeBtn?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    close();
   });
 
   backdrop.addEventListener('click', close);
