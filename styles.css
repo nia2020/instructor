@@ -1754,7 +1754,10 @@ iframe {
 }
 
 .survey-chart-bars {
-  flex: 1;
+  /* 凡例・コールアウトと同一行に並ぶと flex で幅が潰れ % バーが消えるため、
+     ベース幅100%で改行し常にコンテナ全幅の1行を確保する（縦並び時は下のMQで上書き） */
+  flex: 0 0 100%;
+  width: 100%;
   min-width: 0;
 }
 
@@ -1789,6 +1792,8 @@ iframe {
   display: block;
   height: 100%;
   min-width: 2px;
+  /* 親幅が極端に狭いと flex の既定 shrink でパーセント幅が潰れるのを防ぐ */
+  flex-shrink: 0;
   transition: width 0.3s ease;
 }
 
@@ -1819,6 +1824,15 @@ iframe {
 @media (max-width: 640px) {
   .concept-survey-chart {
     flex-direction: column;
+    /* align-items: flex-start のまま縦並びにすると、バー領域の幅が内容に縮み
+       % 幅のセグメントがほぼ 0 になってグラフが見えなくなる */
+    align-items: stretch;
+  }
+
+  .survey-chart-bars {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
   }
 
   .survey-chart-callout {
